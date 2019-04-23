@@ -653,3 +653,1175 @@ Processing by Api::MessagesController#index as JSON
 Completed 200 OK in 36ms (Views: 24.7ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:05 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering api/messages/index.json.jbuilder
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16 AND (id > '232')[0m
+  Rendered api/messages/index.json.jbuilder (5.8ms)
+Completed 200 OK in 108ms (Views: 20.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:09 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering api/messages/index.json.jbuilder
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16 AND (id > '232')[0m
+  Rendered api/messages/index.json.jbuilder (1.4ms)
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2019-04-22 17:06:09 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/edit.html.haml within layouts/application
+  Rendered users/edit.html.haml within layouts/application (45.9ms)
+  Rendered layouts/_notifications.html.haml (3.6ms)
+Completed 200 OK in 380ms (Views: 375.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:14 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering api/messages/index.json.jbuilder
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16 AND (id > '232')[0m
+  Rendered api/messages/index.json.jbuilder (2.3ms)
+Completed 200 OK in 24ms (Views: 16.6ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-04-22 17:06:14 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sIpSCuM1jelbW2RAc3S2l3ooS00ARzthTHa8OI1h3lvKlrQMi5dWNf/EqrkcHR2rnBz6Z7Vv5dfLxazCb2XOEA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-22 17:06:14 +0900
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-22 17:06:14 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (1.8ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (9.8ms)
+  Rendered layouts/_notifications.html.haml (1.4ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:24 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:24 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:29 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:29 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:34 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:34 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:39 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:39 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:06:59 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:06:59 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:09 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:09 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:14 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:14 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:23 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:24 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:30 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:30 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:34 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:34 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:39 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:41 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:45 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:50 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:07:55 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:07:59 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:00 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:05 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:09 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:11 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:14 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:15 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:20 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:23 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:25 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:30 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:30 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:34 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:35 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:38 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:39 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:45 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:46 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:50 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:08:55 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:08:59 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:00 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:05 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:09 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:10 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:14 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:15 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:20 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:24 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:25 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:29 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:30 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:34 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:35 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:39 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:40 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:45 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:50 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:55 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:09:59 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:09:59 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:06 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:09 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:10 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:13 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:15 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:25 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:26 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:29 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:30 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:33 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:34 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:38 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:41 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:48 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:53 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:10:58 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:10:59 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:03 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:08 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:09 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:13 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:14 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:18 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:23 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:24 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:28 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:29 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:35 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:36 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:39 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:40 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:43 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:48 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:11:53 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:11:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:00 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:01 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:08 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:09 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:13 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:14 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:20 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:21 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:24 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:25 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:29 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:29 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:33 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:35 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:40 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:40 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:45 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:55 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:12:58 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:12:59 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:03 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:04 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:10 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:11 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:14 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:15 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:18 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:19 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:23 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:24 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:28 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:29 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:33 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:34 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:40 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:40 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:43 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:44 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:48 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:49 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/16/api/messages?id=232" for ::1 at 2019-04-22 17:13:53 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"id"=>"232", "group_id"=>"16"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/undefined/api/messages" for ::1 at 2019-04-22 17:13:54 +0900
+Processing by Api::MessagesController#index as JSON
+  Parameters: {"group_id"=>"undefined"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
