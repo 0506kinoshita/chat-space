@@ -58,7 +58,7 @@ $(function(){
         $('.js-form')[0].reset();
       })
       .fail(function(){
-        alert('error');
+        alert('非同期通信のエラー');
       });
       return false;
     });
