@@ -80,7 +80,7 @@ $(function(){
         })
       })
       .fail(function() {
-        console.log('error!!');
+        console.log('erro');
       });
     }
     setInterval(reloadMessages, 5000);
